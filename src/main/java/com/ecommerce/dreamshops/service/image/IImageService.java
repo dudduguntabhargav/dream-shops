@@ -1,0 +1,16 @@
+package com.ecommerce.dreamshops.service.image;
+
+import com.ecommerce.dreamshops.dto.ImageDto;
+import com.ecommerce.dreamshops.model.Image;
+import org.springframework.web.multipart.MultipartFile;
+import java.util.*;
+
+public interface IImageService {
+    Image getImageById(Long id);
+    void deleteImagebyId(Long id);
+    List<ImageDto> saveImages(Long productId, List<MultipartFile> files);
+    void updateImage(MultipartFile file,Long imageId);
+
+
+
+}
